@@ -1,8 +1,8 @@
 # GitHub Pages deployment
 
 Target owner: Mukul1991 only. Target repository: believe-sign.
-Planned repository URL: https://github.com/Mukul1991/believe-sign
-Planned Pages URL: https://mukul1991.github.io/believe-sign/
+Planned repository URL: https://github.com/believe-sign-studio/believe-sign
+Planned Pages URL: https://believe-sign-studio.github.io/believe-sign/
 Neither URL is evidence of creation or deployment.
 
 ## Build
@@ -20,7 +20,7 @@ No visual CSS or layout changes are required by this migration.
 The owner approved public deployment after the requested checks on 7 November 2026.
 Only the Mukul1991 connection is used for repository writes.
 The workflow builds on main pushes and pull requests; only main pushes or manual runs
-in Mukul1991/believe-sign may deploy. GitHub Pages must use GitHub Actions as its source.
+in believe-sign-studio/believe-sign may deploy. GitHub Pages must use GitHub Actions as its source.
 No environment secrets are required. Optional server email credentials must never be
 committed or added to client variables. Keep node_modules, caches and .env secrets excluded.
 The dependency manifest and lockfile are included; CI installs them using npm ci.
