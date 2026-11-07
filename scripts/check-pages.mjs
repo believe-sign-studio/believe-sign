@@ -3,7 +3,7 @@ import {existsSync,readdirSync,readFileSync,statSync,writeFileSync} from 'node:f
 import path from 'node:path';
 const root=path.resolve('out');
 const base='/believe-sign';
-const origin=`https://mukul1991.github.io${base}`;
+const origin=`https://believe-sign-studio.github.io${base}`;
 const errors=[];
 const walk=dir=>readdirSync(dir).flatMap(name=>{const file=path.join(dir,name);return statSync(file).isDirectory()?walk(file):[file]});
 const all=walk(root);
