@@ -1,0 +1,53 @@
+{
+  "mocked": true,
+  "results": [
+    {
+      "name": "unconfigured delivery fails closed",
+      "status": 503
+    },
+    {
+      "name": "cross-origin rejected",
+      "status": 403
+    },
+    {
+      "name": "missing consent rejected",
+      "status": 400
+    },
+    {
+      "name": "invalid email rejected",
+      "status": 400
+    },
+    {
+      "name": "negative dimensions rejected",
+      "status": 400
+    },
+    {
+      "name": "honeypot rejected",
+      "status": 400
+    },
+    {
+      "name": "oversized body header rejected",
+      "status": 413
+    },
+    {
+      "name": "missing spam token rejected",
+      "status": 400
+    },
+    {
+      "name": "invalid spam verification rejected",
+      "status": 400
+    },
+    {
+      "name": "wrong token hostname rejected",
+      "status": 400
+    },
+    {
+      "name": "valid enquiry reaches mocked text-only provider",
+      "status": 200
+    },
+    {
+      "name": "provider failure reported",
+      "status": 502
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {quoteMessage,whatsappEnquiryUrl,emailEnquiryUrl} from '../lib/quote-message.ts';
+const quote={name:'Anita & Co',phone:'+91 99999 99999',email:'test@example.com',category:'Acrylic signage',width:'12',height:'3',unit:'ft',material:'Acrylic',illumination:'Backlit / halo',city:'Siliguri',requirements:'Logo: A+B? Bengali: বাংলা\nOutdoor frontage'};
+const message=quoteMessage(quote,true);
+for(const value of Object.values(quote))assert.ok(message.includes(value),`Missing ${value}`);
+assert.ok(message.includes('attach my photo or logo in this chat'));
+const wa=new URL(whatsappEnquiryUrl('919382300315',message));
+assert.equal(wa.host,'wa.me');assert.equal(wa.pathname,'/919382300315');assert.equal(wa.searchParams.get('text'),message);
+const mail=new URL(emailEnquiryUrl('social.believesign@gmail.com',message));
+assert.equal(mail.protocol,'mailto:');assert.equal(mail.searchParams.get('body'),message);
+const unknown=quoteMessage({...quote,width:'',height:'',email:'',requirements:''},false);
+assert.ok(unknown.includes('To confirm × To confirm ft'));assert.ok(unknown.includes('Not supplied yet'));assert.ok(!unknown.includes('undefined'));
+console.log('Passed: all enquiry details, Unicode and special-character encoding, WhatsApp recipient, email draft body, attachment instruction and unknown dimensions.');

@@ -1,0 +1,14 @@
+{
+  "files": 90,
+  "bytes": 2720413,
+  "assets": 15,
+  "secretPatternMatches": [],
+  "excluded": [
+    "node_modules",
+    ".git",
+    ".next",
+    "out",
+    ".sites-local",
+    ".env secrets"
+  ]
+}

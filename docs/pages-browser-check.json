@@ -1,0 +1,32 @@
+{
+  "productionPagesBuild": "passed (Next.js export and TypeScript)",
+  "localReferences": 812,
+  "imageReferences": 82,
+  "videoPlayback": {
+    "IvTGHeyWuDE": {
+      "duration": 30.061,
+      "readyState": 4,
+      "playedToEnd": true
+    },
+    "vCMztaQKG7Q": {
+      "duration": 33.461,
+      "readyState": 4,
+      "playedToEnd": true
+    }
+  },
+  "responsiveWidths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "homepageOverflow": false,
+  "quotationOverflow": false,
+  "whatsappRecipient": "919382300315",
+  "whatsappAndEmailBodiesMatch": true,
+  "queryDetailsAndEncoding": "passed",
+  "actualMessagesSent": false,
+  "browserConsoleWarningsAndErrors": [],
+  "sourceCredentialPatternMatches": [],
+  "remoteDeployment": "pending"
+}
