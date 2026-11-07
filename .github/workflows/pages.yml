@@ -35,7 +35,7 @@ jobs:
 
   # Public launch approved by the owner after local build and browser checks.
   deploy:
-    if: github.repository == 'Mukul1991/believe-sign' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    if: github.repository == 'believe-sign-studio/believe-sign' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     permissions:
