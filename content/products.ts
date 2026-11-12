@@ -1,3 +1,107 @@
+const neonSamples = [
+  {
+    "image": "neon-welcome-open.webp",
+    "caption": "Welcome · We Are Open reference.",
+    "alt": "Welcome · We Are Open signage"
+  },
+  {
+    "image": "neon-birthday-stars.webp",
+    "caption": "Happy Birthday · Stars reference.",
+    "alt": "Happy Birthday · Stars signage"
+  },
+  {
+    "image": "neon-birthday-hearts.webp",
+    "caption": "Happy Birthday · Hearts reference.",
+    "alt": "Happy Birthday · Hearts signage"
+  },
+  {
+    "image": "neon-birthday-warm.webp",
+    "caption": "Happy Birthday · Warm Script reference.",
+    "alt": "Happy Birthday · Warm Script signage"
+  },
+  {
+    "image": "neon-good-vibes.webp",
+    "caption": "Good Vibes Only reference.",
+    "alt": "Good Vibes Only signage"
+  },
+  {
+    "image": "neon-right-place.webp",
+    "caption": "You’re in the Right Place reference.",
+    "alt": "You’re in the Right Place signage"
+  },
+  {
+    "image": "neon-better-together.webp",
+    "caption": "Better Together reference.",
+    "alt": "Better Together signage"
+  },
+  {
+    "image": "neon-multi-cuisine.webp",
+    "caption": "Multi Cuisine Restaurant reference.",
+    "alt": "Multi Cuisine Restaurant signage"
+  },
+  {
+    "image": "neon-rooms-available.webp",
+    "caption": "Rooms Available reference.",
+    "alt": "Rooms Available signage"
+  },
+  {
+    "image": "neon-wings.webp",
+    "caption": "Multicolour Neon Wings reference.",
+    "alt": "Multicolour Neon Wings signage"
+  }
+];
+
+const flexGlowSamples = [
+  {
+    "image": "flex-glow-bou-rani.webp",
+    "caption": "Bou Rani Saree Shop reference.",
+    "alt": "Bou Rani Saree Shop signage"
+  },
+  {
+    "image": "flex-glow-arsh-salon.webp",
+    "caption": "The Arsh Unisex Salon reference.",
+    "alt": "The Arsh Unisex Salon signage"
+  },
+  {
+    "image": "flex-glow-blue-bell.webp",
+    "caption": "Blue Bell Inn & Restaurant reference.",
+    "alt": "Blue Bell Inn & Restaurant signage"
+  },
+  {
+    "image": "flex-glow-dental-unit.webp",
+    "caption": "33 Corps Dental Unit reference.",
+    "alt": "33 Corps Dental Unit signage"
+  },
+  {
+    "image": "flex-glow-tender-cuts.webp",
+    "caption": "Tender Cuts reference.",
+    "alt": "Tender Cuts signage"
+  }
+];
+
+const lollipopSamples = [
+  {
+    "image": "lollipop-gang-jong.webp",
+    "caption": "Gang Jong Restaurant projecting sign reference.",
+    "alt": "Gang Jong Restaurant circular sign"
+  },
+  {
+    "image": "lollipop-wonder-woods.webp",
+    "caption": "Wonder Woods Boutique Hotel projecting sign reference.",
+    "alt": "Wonder Woods Boutique Hotel circular sign"
+  },
+  {
+    "image": "lollipop-brand-displays.webp",
+    "caption": "Round Brand Display Signs projecting sign reference.",
+    "alt": "Round Brand Display Signs circular sign"
+  },
+  {
+    "image": "lollipop-broadway-boutique.webp",
+    "caption": "Hotel Broadway Boutique projecting sign reference.",
+    "alt": "Hotel Broadway Boutique circular sign"
+  }
+];
+
 const steelBacklitSamples = [
   {
     "image": "steel-backlit-danmo.webp",
@@ -322,9 +426,9 @@ export const products:Product[]=[
  {id:'acrylic-letters',name:'3D acrylic signage letters',family:'Letters',price:'₹80–₹90',unit:'per inch of height, per letter',description:'Custom acrylic letters and logos, made to your artwork.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'acrylic-letters-midtown.webp',samples:acrylicLetterSamples,service:'acrylic-sign-boards'},
  {id:'acp',name:'ACP fabrication + 3D acrylic letters',family:'ACP & fascia',price:'₹230–₹280',unit:'per sq ft for ACP fabrication',description:'A complete fascia backdrop with separately priced acrylic lettering.',note:'ACP fabrication includes installation within Siliguri. Acrylic letters: ₹90–₹100 per inch of height, per letter, charged separately. GST and transport are excluded. Final cost depends on ACP area, letter sizes and quantity.',image:'acp-mount-villa.webp',samples:acpSamples,service:'acp-sign-boards'},
  {id:'steel-backlit',name:'Stainless steel backlit letters',family:'Letters',price:'₹90–₹160',unit:'per inch of height, per letter',description:'Metal lettering with a soft halo of light behind each letter.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'steel-backlit-indo-crafts.webp',samples:steelBacklitSamples,service:'stainless-steel-letter-signage'},
- {id:'lollipop',name:'Lollipop sign board',family:'Projecting signs',price:'₹800–₹900',unit:'per sq ft',description:'A projecting sign that helps customers spot your entrance.',note:'Indicative rate varies with sign size and quantity.',image:'2d-led-sign-board.jpg',samples:reference('2d-led-sign-board.jpg'),service:'lollipop-sign-boards'},
- {id:'flex-glow',name:'Backlit flex glow sign board',family:'Neon & glow',price:'₹220–₹270',unit:'per sq ft',description:'An illuminated panel for your name, artwork and business details.',note:'Indicative rate varies with the sign board size.',image:'image8.jpg',samples:reference('image8.jpg'),service:'glow-sign-boards'},
- {id:'neon',name:'Neon light signage',family:'Neon & glow',price:'₹700–₹900',unit:'per sq ft',description:'A distinctive line of light for a name, phrase or feature wall.',note:'Indicative rate varies with sign size, lettering content and quantity.',image:'image6.jpg',samples:reference('image6.jpg'),service:'neon-sign-boards'}
+ {id:'lollipop',name:'Lollipop sign board',family:'Projecting signs',price:'₹800–₹900',unit:'per sq ft',description:'A projecting sign that helps customers spot your entrance.',note:'Indicative rate varies with sign size and quantity.',image:'lollipop-wonder-woods.webp',samples:lollipopSamples,service:'lollipop-sign-boards'},
+ {id:'flex-glow',name:'Backlit flex glow sign board',family:'Neon & glow',price:'₹220–₹270',unit:'per sq ft',description:'An illuminated panel for your name, artwork and business details.',note:'Indicative rate varies with the sign board size.',image:'flex-glow-blue-bell.webp',samples:flexGlowSamples,service:'glow-sign-boards'},
+ {id:'neon',name:'Neon light signage',family:'Neon & glow',price:'₹700–₹900',unit:'per sq ft',description:'A distinctive line of light for a name, phrase or feature wall.',note:'Indicative rate varies with sign size, lettering content and quantity.',image:'neon-good-vibes.webp',samples:neonSamples,service:'neon-sign-boards'}
 ];
 export const businessCategories=[
  {name:'Hotels',description:'Hotel name boards, entrance lettering and reception branding.',ids:['3d-led','gold-acrylic','steel-backlit','acp','acrylic-letters']},

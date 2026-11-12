@@ -13,6 +13,9 @@ assert.equal(products.find(p=>p.id==='mixed-led').samples.length,8);
 assert.equal(products.find(p=>p.id==='acrylic-letters').samples.length,11);
 assert.equal(products.find(p=>p.id==='acp').samples.length,6);
 assert.equal(products.find(p=>p.id==='steel-backlit').samples.length,4);
+assert.equal(products.find(p=>p.id==='lollipop').samples.length,4);
+assert.equal(products.find(p=>p.id==='flex-glow').samples.length,5);
+assert.equal(products.find(p=>p.id==='neon').samples.length,10);
 assert.equal(new Set(products.map(p=>p.service)).size,10);
 for(const p of products){assert(productExplanations[p.id]?.length>0);assert(productExplanations[p.id].every(section=>section.paragraphs.length>=2));}
 assert(readFileSync('components/Shell.tsx','utf8').includes('19CSMPA2697H1ZC'));
