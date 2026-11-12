@@ -1,7 +1,7 @@
 'use client';
 import {useState} from 'react';
 import Image from '@/components/SiteImage';
-function BrandLogo(){return <span className="brand-logo-window"><Image src="/images/believe-sign-logo.jpg" alt="Believe Sign Siliguri logo" width={1254} height={1254} priority/></span>}
+function BrandLogo(){return <span className="brand-logo-window"><Image src="/images/believe-sign-dark-gold-logo.webp" alt="Believe Sign Siliguri logo" width={1254} height={1254} priority/></span>}
 import Link from '@/components/Link';
 import {business} from '@/content/business';
 import {FloatingContact,WhatsAppIcon,PhoneIcon} from '@/components/ContactActions';
