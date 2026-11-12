@@ -1,3 +1,26 @@
+const steelBacklitSamples = [
+  {
+    "image": "steel-backlit-danmo.webp",
+    "caption": "DANMO backlit lettering reference.",
+    "alt": "DANMO backlit letters"
+  },
+  {
+    "image": "steel-backlit-indo-crafts.webp",
+    "caption": "Indo-crafts backlit lettering reference.",
+    "alt": "Indo-crafts backlit letters"
+  },
+  {
+    "image": "steel-backlit-tanishq.webp",
+    "caption": "Tanishq Lettering backlit lettering reference.",
+    "alt": "Tanishq Lettering backlit letters"
+  },
+  {
+    "image": "steel-backlit-bannie.webp",
+    "caption": "BANNIE backlit lettering reference.",
+    "alt": "BANNIE backlit letters"
+  }
+];
+
 const acpSamples = [
   {
     "image": "acp-monginis.webp",
@@ -298,7 +321,7 @@ export const products:Product[]=[
  {id:'mixed-led',name:'3D with 2D letters LED sign board',family:'LED boards',price:'₹600–₹700',unit:'per sq ft',description:'Combine raised and flat lettering in one coordinated sign.',note:'Indicative rate varies with board size and lettering details.',image:'mixed-led-sikkim-it.webp',samples:mixedLedSamples,service:'3d-with-2d-led-sign-boards'},
  {id:'acrylic-letters',name:'3D acrylic signage letters',family:'Letters',price:'₹80–₹90',unit:'per inch of height, per letter',description:'Custom acrylic letters and logos, made to your artwork.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'acrylic-letters-midtown.webp',samples:acrylicLetterSamples,service:'acrylic-sign-boards'},
  {id:'acp',name:'ACP fabrication + 3D acrylic letters',family:'ACP & fascia',price:'₹230–₹280',unit:'per sq ft for ACP fabrication',description:'A complete fascia backdrop with separately priced acrylic lettering.',note:'ACP fabrication includes installation within Siliguri. Acrylic letters: ₹90–₹100 per inch of height, per letter, charged separately. GST and transport are excluded. Final cost depends on ACP area, letter sizes and quantity.',image:'acp-mount-villa.webp',samples:acpSamples,service:'acp-sign-boards'},
- {id:'steel-backlit',name:'Stainless steel backlit letters',family:'Letters',price:'₹90–₹160',unit:'per inch of height, per letter',description:'Metal lettering with a soft halo of light behind each letter.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'image7.jpg',samples:reference('image7.jpg'),service:'stainless-steel-letter-signage'},
+ {id:'steel-backlit',name:'Stainless steel backlit letters',family:'Letters',price:'₹90–₹160',unit:'per inch of height, per letter',description:'Metal lettering with a soft halo of light behind each letter.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'steel-backlit-indo-crafts.webp',samples:steelBacklitSamples,service:'stainless-steel-letter-signage'},
  {id:'lollipop',name:'Lollipop sign board',family:'Projecting signs',price:'₹800–₹900',unit:'per sq ft',description:'A projecting sign that helps customers spot your entrance.',note:'Indicative rate varies with sign size and quantity.',image:'2d-led-sign-board.jpg',samples:reference('2d-led-sign-board.jpg'),service:'lollipop-sign-boards'},
  {id:'flex-glow',name:'Backlit flex glow sign board',family:'Neon & glow',price:'₹220–₹270',unit:'per sq ft',description:'An illuminated panel for your name, artwork and business details.',note:'Indicative rate varies with the sign board size.',image:'image8.jpg',samples:reference('image8.jpg'),service:'glow-sign-boards'},
  {id:'neon',name:'Neon light signage',family:'Neon & glow',price:'₹700–₹900',unit:'per sq ft',description:'A distinctive line of light for a name, phrase or feature wall.',note:'Indicative rate varies with sign size, lettering content and quantity.',image:'image6.jpg',samples:reference('image6.jpg'),service:'neon-sign-boards'}
