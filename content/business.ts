@@ -1,3 +1,4 @@
+import {addedProjects} from './portfolio';
 export const business = {
   name: 'Believe Sign', phone: '+91 93823 00315', tel: '+919382300315', whatsapp: '919382300315',
   email: 'social.believesign@gmail.com',
@@ -16,6 +17,7 @@ export const services = [
  {slug:'glow-sign-boards',name:'Glow sign boards',short:'A bright canvas for your business.',image:'image8.jpg',tag:'ILLUMINATED PANELS',intro:'A glow sign presents a larger illuminated face for a business name, identity and supporting information. Glow sign boards are a verified category on Believe Sign’s existing website.',sections:[['Organise the message','Keep the business name as the main visual element. Supporting text should remain readable from the expected viewing distance, with sufficient space between the logo, services and contact details.'],['Plan for day and night','An illuminated panel needs to communicate in daylight as well as after dark. Discuss contrast, the artwork background and how much detail will remain clear at a distance.'],['Confirm construction and access','Ask about the face material, frame, lighting layout and maintenance access. Construction and weather suitability must be specified for the actual installation environment.'],['Requesting a proposal','Supply the panel size, artwork, installation location and photographs of the frontage. Mention whether you need a new frame, a replacement face or a complete installation.']]},
 ];
 export const projects = [
+ ...addedProjects,
  {title:'Sandhya Makeup Studio & Academy',category:'Illuminated',image:'image1.jpg',alt:'Illuminated Sandhya Makeup Studio and Academy sign displayed in the workshop'},
  {title:'Prince Lodge',category:'Illuminated',image:'image2.jpg',alt:'Prince Lodge raised letters illuminated in warm yellow at night'},
  {title:'Kashiram’s',category:'Storefronts',image:'image7.jpg',alt:'Kashiram’s corner storefront with raised white lettering on a dark fascia'},

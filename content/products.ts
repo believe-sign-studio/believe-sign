@@ -1,3 +1,71 @@
+const goldenAcrylicSamples = [
+  {
+    "image": "gold-acrylic-hardware-junction.webp",
+    "caption": "Hardware Junction day and illuminated comparison.",
+    "alt": "Hardware Junction day and illuminated comparison"
+  },
+  {
+    "image": "gold-acrylic-broadway-boutique.webp",
+    "caption": "Broadway Boutique golden lettering.",
+    "alt": "Broadway Boutique golden lettering"
+  },
+  {
+    "image": "gold-acrylic-broadway-night.webp",
+    "caption": "Broadway Boutique Hotel illuminated vertical sign.",
+    "alt": "Broadway Boutique Hotel illuminated vertical sign"
+  },
+  {
+    "image": "gold-acrylic-samrat-jewellers-day.webp",
+    "caption": "Samrat Jewellers golden lettering in daylight.",
+    "alt": "Samrat Jewellers golden lettering in daylight"
+  },
+  {
+    "image": "gold-acrylic-broadway-day.webp",
+    "caption": "Broadway Boutique Hotel vertical sign in daylight.",
+    "alt": "Broadway Boutique Hotel vertical sign in daylight"
+  },
+  {
+    "image": "gold-acrylic-bajrangi-dhaba.webp",
+    "caption": "Bajrangi Dhaba day and illuminated comparison.",
+    "alt": "Bajrangi Dhaba day and illuminated comparison"
+  },
+  {
+    "image": "gold-acrylic-the-locs-left.webp",
+    "caption": "The Locs Nail & Beauty Spa golden lettering — left view.",
+    "alt": "The Locs Nail & Beauty Spa golden lettering — left view"
+  },
+  {
+    "image": "gold-acrylic-the-locs-right.webp",
+    "caption": "The Locs Nail & Beauty Spa golden lettering — right view.",
+    "alt": "The Locs Nail & Beauty Spa golden lettering — right view"
+  },
+  {
+    "image": "gold-acrylic-hotel-broadway.webp",
+    "caption": "Hotel Broadway day and illuminated comparison.",
+    "alt": "Hotel Broadway day and illuminated comparison"
+  },
+  {
+    "image": "gold-acrylic-cyber-treasury.webp",
+    "caption": "Cyber Treasury Cum Information Technology Division lettering.",
+    "alt": "Cyber Treasury Cum Information Technology Division lettering"
+  },
+  {
+    "image": "gold-acrylic-uncles-cafe-workshop.webp",
+    "caption": "Uncle’s Café illuminated sign in the workshop.",
+    "alt": "Uncle’s Café illuminated sign in the workshop"
+  },
+  {
+    "image": "gold-acrylic-uncles-cafe-installed.webp",
+    "caption": "Uncle’s Café installed illuminated sign.",
+    "alt": "Uncle’s Café installed illuminated sign"
+  },
+  {
+    "image": "gold-acrylic-samrat-jewellers-night.webp",
+    "caption": "Samrat Jewellers illuminated sign in the workshop.",
+    "alt": "Samrat Jewellers illuminated sign in the workshop"
+  }
+];
+
 const threeDLedSamples = [
   {
     "image": "3d-led-muscle-aid-night.webp",
@@ -92,7 +160,7 @@ const reference=(image:string)=>[{image,caption:'Portfolio reference. Confirm th
 export const products:Product[]=[
  {id:'2d-led',name:'2D LED sign board',family:'LED boards',price:'₹550–₹650',unit:'per sq ft',description:'A clean illuminated face for a clear, readable business name.',note:'Indicative rate varies with board size and lettering details.',image:'2d-led-himalayan-night.webp',samples:twoDLedSamples,service:'2d-led-sign-boards'},
  {id:'3d-led',name:'3D letters LED sign board',family:'LED boards',price:'₹650–₹750',unit:'per sq ft',description:'Raised illuminated lettering with depth and after-dark presence.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-muscle-aid-night.webp',samples:threeDLedSamples,service:'3d-led-sign-boards'},
- {id:'gold-acrylic',name:'3D golden acrylic LED sign board',family:'LED boards',price:'₹700–₹800',unit:'per sq ft',description:'Golden acrylic lettering for a warm, expressive brand finish.',note:'Indicative rate varies with board size and lettering details.',image:'3d-acrylic-signage-letters.jpg',samples:reference('3d-acrylic-signage-letters.jpg'),service:'golden-acrylic-led-sign-boards'},
+ {id:'gold-acrylic',name:'3D golden acrylic LED sign board',family:'LED boards',price:'₹700–₹800',unit:'per sq ft',description:'Golden acrylic lettering for a warm, expressive brand finish.',note:'Indicative rate varies with board size and lettering details.',image:'gold-acrylic-samrat-jewellers-day.webp',samples:goldenAcrylicSamples,service:'golden-acrylic-led-sign-boards'},
  {id:'mixed-led',name:'3D with 2D letters LED sign board',family:'LED boards',price:'₹600–₹700',unit:'per sq ft',description:'Combine raised and flat lettering in one coordinated sign.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-sign-board.jpg',samples:reference('3d-led-sign-board.jpg'),service:'3d-with-2d-led-sign-boards'},
  {id:'acrylic-letters',name:'3D acrylic signage letters',family:'Letters',price:'₹80–₹90',unit:'per inch of height, per letter',description:'Custom acrylic letters and logos, made to your artwork.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'3d-acrylic-signage-letters.jpg',samples:reference('3d-acrylic-signage-letters.jpg'),service:'acrylic-sign-boards'},
  {id:'acp',name:'ACP fabrication + 3D acrylic letters',family:'ACP & fascia',price:'₹230–₹280',unit:'per sq ft for ACP fabrication',description:'A complete fascia backdrop with separately priced acrylic lettering.',note:'ACP fabrication includes installation within Siliguri. Acrylic letters: ₹90–₹100 per inch of height, per letter, charged separately. GST and transport are excluded. Final cost depends on ACP area, letter sizes and quantity.',image:'image5.jpg',samples:reference('image5.jpg'),service:'acp-sign-boards'},
