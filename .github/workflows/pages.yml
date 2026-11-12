@@ -28,6 +28,8 @@ jobs:
         run: npm run build:pages
       - name: Validate enquiry message encoding
         run: node scripts/check-quote-message.mjs
+      - name: Validate catalogue pricing and categories
+        run: node scripts/check-products.mjs
       - name: Upload static website
         uses: actions/upload-pages-artifact@v4
         with:
