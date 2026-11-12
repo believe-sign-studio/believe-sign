@@ -1,3 +1,46 @@
+const threeDLedSamples = [
+  {
+    "image": "3d-led-muscle-aid-night.webp",
+    "caption": "Muscle Aid Fitness illuminated storefront · client-supplied 3D LED reference.",
+    "alt": "Muscle Aid Fitness illuminated storefront"
+  },
+  {
+    "image": "3d-led-royals-nest.webp",
+    "caption": "Royals Nest raised lettering · client-supplied 3D LED reference.",
+    "alt": "Royals Nest raised lettering"
+  },
+  {
+    "image": "3d-led-muscle-aid-night-2.webp",
+    "caption": "Muscle Aid Fitness alternate reference · client-supplied 3D LED reference.",
+    "alt": "Muscle Aid Fitness alternate reference"
+  },
+  {
+    "image": "3d-led-balaji-hardware.webp",
+    "caption": "Balaji Hardware & Sanitary Store lettering · client-supplied 3D LED reference.",
+    "alt": "Balaji Hardware & Sanitary Store lettering"
+  },
+  {
+    "image": "3d-led-paradons-pub.webp",
+    "caption": "New Paradons Home Pub lettering · client-supplied 3D LED reference.",
+    "alt": "New Paradons Home Pub lettering"
+  },
+  {
+    "image": "3d-led-hmi-entrance.webp",
+    "caption": "Himalayan Mountaineering Institute entrance · client-supplied 3D LED reference.",
+    "alt": "Himalayan Mountaineering Institute entrance"
+  },
+  {
+    "image": "3d-led-hmi-signboard.webp",
+    "caption": "Himalayan Mountaineering Institute signboard · client-supplied 3D LED reference.",
+    "alt": "Himalayan Mountaineering Institute signboard"
+  },
+  {
+    "image": "3d-led-godwin-school.webp",
+    "caption": "Godwin Modern School illuminated signboard · client-supplied 3D LED reference.",
+    "alt": "Godwin Modern School illuminated signboard"
+  }
+];
+
 const twoDLedSamples = [
   {
     "image": "2d-led-clinic-reference-1.webp",
@@ -48,9 +91,9 @@ export type Product = {
 const reference=(image:string)=>[{image,caption:'Portfolio reference. Confirm the final material, lighting and finish with our team.'}];
 export const products:Product[]=[
  {id:'2d-led',name:'2D LED sign board',family:'LED boards',price:'₹550–₹650',unit:'per sq ft',description:'A clean illuminated face for a clear, readable business name.',note:'Indicative rate varies with board size and lettering details.',image:'2d-led-himalayan-night.webp',samples:twoDLedSamples,service:'2d-led-sign-boards'},
- {id:'3d-led',name:'3D letters LED sign board',family:'LED boards',price:'₹650–₹750',unit:'per sq ft',description:'Raised illuminated lettering with depth and after-dark presence.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-sign-board.jpg',samples:reference('3d-led-sign-board.jpg'),service:'3d-led-sign-boards'},
+ {id:'3d-led',name:'3D letters LED sign board',family:'LED boards',price:'₹650–₹750',unit:'per sq ft',description:'Raised illuminated lettering with depth and after-dark presence.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-muscle-aid-night.webp',samples:threeDLedSamples,service:'3d-led-sign-boards'},
  {id:'gold-acrylic',name:'3D golden acrylic LED sign board',family:'LED boards',price:'₹700–₹800',unit:'per sq ft',description:'Golden acrylic lettering for a warm, expressive brand finish.',note:'Indicative rate varies with board size and lettering details.',image:'3d-acrylic-signage-letters.jpg',samples:reference('3d-acrylic-signage-letters.jpg'),service:'acrylic-sign-boards'},
- {id:'mixed-led',name:'3D with 2D letters LED sign board',family:'LED boards',price:'₹600–₹700',unit:'per sq ft',description:'Combine raised and flat lettering in one coordinated sign.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-sign-board.jpg',samples:reference('3d-led-sign-board.jpg'),service:'3d-led-sign-boards'},
+ {id:'mixed-led',name:'3D with 2D letters LED sign board',family:'LED boards',price:'₹600–₹700',unit:'per sq ft',description:'Combine raised and flat lettering in one coordinated sign.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-muscle-aid-night.webp',samples:threeDLedSamples,service:'3d-led-sign-boards'},
  {id:'acrylic-letters',name:'3D acrylic signage letters',family:'Letters',price:'₹80–₹90',unit:'per inch of height, per letter',description:'Custom acrylic letters and logos, made to your artwork.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'3d-acrylic-signage-letters.jpg',samples:reference('3d-acrylic-signage-letters.jpg'),service:'acrylic-sign-boards'},
  {id:'acp',name:'ACP fabrication + 3D acrylic letters',family:'ACP & fascia',price:'₹230–₹280',unit:'per sq ft for ACP fabrication',description:'A complete fascia backdrop with separately priced acrylic lettering.',note:'ACP fabrication includes installation within Siliguri. Acrylic letters: ₹90–₹100 per inch of height, per letter, charged separately. GST and transport are excluded. Final cost depends on ACP area, letter sizes and quantity.',image:'image5.jpg',samples:reference('image5.jpg'),service:'acp-sign-boards'},
  {id:'steel-backlit',name:'Stainless steel backlit letters',family:'Letters',price:'₹90–₹160',unit:'per inch of height, per letter',description:'Metal lettering with a soft halo of light behind each letter.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'image7.jpg',samples:reference('image7.jpg'),service:'stainless-steel-letter-signage'},
