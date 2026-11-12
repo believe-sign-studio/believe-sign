@@ -1,3 +1,46 @@
+const mixedLedSamples = [
+  {
+    "image": "mixed-led-sikkim-it.webp",
+    "caption": "Sikkim IT Enterprise illuminated board.",
+    "alt": "Sikkim IT Enterprise illuminated board"
+  },
+  {
+    "image": "mixed-led-echo-wheels-projecting.webp",
+    "caption": "Echo Wheels projecting sign — workshop and installed views.",
+    "alt": "Echo Wheels projecting sign — workshop and installed views"
+  },
+  {
+    "image": "mixed-led-maa-manasa-telecom.webp",
+    "caption": "Maa Manasa Telecom sales and service board.",
+    "alt": "Maa Manasa Telecom sales and service board"
+  },
+  {
+    "image": "mixed-led-walis-bakers-night.webp",
+    "caption": "Siliguri Walis Bakers & Confectioners illuminated frontage.",
+    "alt": "Siliguri Walis Bakers & Confectioners illuminated frontage"
+  },
+  {
+    "image": "mixed-led-walis-bakers-day.webp",
+    "caption": "Siliguri Walis Bakers & Confectioners daylight frontage.",
+    "alt": "Siliguri Walis Bakers & Confectioners daylight frontage"
+  },
+  {
+    "image": "mixed-led-second-closet.webp",
+    "caption": "Second Closet thrift store illuminated board.",
+    "alt": "Second Closet thrift store illuminated board"
+  },
+  {
+    "image": "mixed-led-echo-wheels-fascia.webp",
+    "caption": "Echo Wheels fascia — workshop and installed views.",
+    "alt": "Echo Wheels fascia — workshop and installed views"
+  },
+  {
+    "image": "mixed-led-guardian-fitness.webp",
+    "caption": "Guardian Gym & Fitness Studio illuminated board.",
+    "alt": "Guardian Gym & Fitness Studio illuminated board"
+  }
+];
+
 const goldenAcrylicSamples = [
   {
     "image": "gold-acrylic-hardware-junction.webp",
@@ -161,7 +204,7 @@ export const products:Product[]=[
  {id:'2d-led',name:'2D LED sign board',family:'LED boards',price:'₹550–₹650',unit:'per sq ft',description:'A clean illuminated face for a clear, readable business name.',note:'Indicative rate varies with board size and lettering details.',image:'2d-led-himalayan-night.webp',samples:twoDLedSamples,service:'2d-led-sign-boards'},
  {id:'3d-led',name:'3D letters LED sign board',family:'LED boards',price:'₹650–₹750',unit:'per sq ft',description:'Raised illuminated lettering with depth and after-dark presence.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-muscle-aid-night.webp',samples:threeDLedSamples,service:'3d-led-sign-boards'},
  {id:'gold-acrylic',name:'3D golden acrylic LED sign board',family:'LED boards',price:'₹700–₹800',unit:'per sq ft',description:'Golden acrylic lettering for a warm, expressive brand finish.',note:'Indicative rate varies with board size and lettering details.',image:'gold-acrylic-samrat-jewellers-day.webp',samples:goldenAcrylicSamples,service:'golden-acrylic-led-sign-boards'},
- {id:'mixed-led',name:'3D with 2D letters LED sign board',family:'LED boards',price:'₹600–₹700',unit:'per sq ft',description:'Combine raised and flat lettering in one coordinated sign.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-sign-board.jpg',samples:reference('3d-led-sign-board.jpg'),service:'3d-with-2d-led-sign-boards'},
+ {id:'mixed-led',name:'3D with 2D letters LED sign board',family:'LED boards',price:'₹600–₹700',unit:'per sq ft',description:'Combine raised and flat lettering in one coordinated sign.',note:'Indicative rate varies with board size and lettering details.',image:'mixed-led-sikkim-it.webp',samples:mixedLedSamples,service:'3d-with-2d-led-sign-boards'},
  {id:'acrylic-letters',name:'3D acrylic signage letters',family:'Letters',price:'₹80–₹90',unit:'per inch of height, per letter',description:'Custom acrylic letters and logos, made to your artwork.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'3d-acrylic-signage-letters.jpg',samples:reference('3d-acrylic-signage-letters.jpg'),service:'acrylic-sign-boards'},
  {id:'acp',name:'ACP fabrication + 3D acrylic letters',family:'ACP & fascia',price:'₹230–₹280',unit:'per sq ft for ACP fabrication',description:'A complete fascia backdrop with separately priced acrylic lettering.',note:'ACP fabrication includes installation within Siliguri. Acrylic letters: ₹90–₹100 per inch of height, per letter, charged separately. GST and transport are excluded. Final cost depends on ACP area, letter sizes and quantity.',image:'image5.jpg',samples:reference('image5.jpg'),service:'acp-sign-boards'},
  {id:'steel-backlit',name:'Stainless steel backlit letters',family:'Letters',price:'₹90–₹160',unit:'per inch of height, per letter',description:'Metal lettering with a soft halo of light behind each letter.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'image7.jpg',samples:reference('image7.jpg'),service:'stainless-steel-letter-signage'},
