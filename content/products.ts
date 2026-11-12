@@ -1,10 +1,53 @@
+const twoDLedSamples = [
+  {
+    "image": "2d-led-clinic-reference-1.webp",
+    "caption": "New Shri Maa Medico clinic signboard · client-supplied 2D LED reference.",
+    "alt": "New Shri Maa Medico clinic signboard"
+  },
+  {
+    "image": "2d-led-himalayan-night.webp",
+    "caption": "Himalayan Arts & Crafts illuminated signboard · client-supplied 2D LED reference.",
+    "alt": "Himalayan Arts & Crafts illuminated signboard"
+  },
+  {
+    "image": "2d-led-signboard-collage.webp",
+    "caption": "2D LED signboard reference collage · client-supplied 2D LED reference.",
+    "alt": "2D LED signboard reference collage"
+  },
+  {
+    "image": "2d-led-level5-restaurant.webp",
+    "caption": "Level 5 Pub & Restaurant vertical signboard · client-supplied 2D LED reference.",
+    "alt": "Level 5 Pub & Restaurant vertical signboard"
+  },
+  {
+    "image": "2d-led-clinic-reference-2.webp",
+    "caption": "New Shri Maa Medico clinic signboard — alternate reference · client-supplied 2D LED reference.",
+    "alt": "New Shri Maa Medico clinic signboard — alternate reference"
+  },
+  {
+    "image": "2d-led-budhan-fitness.webp",
+    "caption": "Budhan Fitness Centre illuminated signboard · client-supplied 2D LED reference.",
+    "alt": "Budhan Fitness Centre illuminated signboard"
+  },
+  {
+    "image": "2d-led-modern-bastralaya.webp",
+    "caption": "Modern Bastralaya shop signboard · client-supplied 2D LED reference.",
+    "alt": "Modern Bastralaya shop signboard"
+  },
+  {
+    "image": "2d-led-himalayan-day.webp",
+    "caption": "Himalayan Arts & Crafts signboard in daylight · client-supplied 2D LED reference.",
+    "alt": "Himalayan Arts & Crafts signboard in daylight"
+  }
+];
+
 export type Product = {
  id:string; name:string; family:string; price:string; unit:string; description:string; note:string;
- image:string; samples:{image:string;caption:string}[]; service:string;
+ image:string; samples:{image:string;caption:string;alt?:string}[]; service:string;
 };
 const reference=(image:string)=>[{image,caption:'Portfolio reference. Confirm the final material, lighting and finish with our team.'}];
 export const products:Product[]=[
- {id:'2d-led',name:'2D LED sign board',family:'LED boards',price:'₹550–₹650',unit:'per sq ft',description:'A clean illuminated face for a clear, readable business name.',note:'Indicative rate varies with board size and lettering details.',image:'2d-led-sign-board.jpg',samples:reference('2d-led-sign-board.jpg'),service:'2d-led-sign-boards'},
+ {id:'2d-led',name:'2D LED sign board',family:'LED boards',price:'₹550–₹650',unit:'per sq ft',description:'A clean illuminated face for a clear, readable business name.',note:'Indicative rate varies with board size and lettering details.',image:'2d-led-himalayan-night.webp',samples:twoDLedSamples,service:'2d-led-sign-boards'},
  {id:'3d-led',name:'3D letters LED sign board',family:'LED boards',price:'₹650–₹750',unit:'per sq ft',description:'Raised illuminated lettering with depth and after-dark presence.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-sign-board.jpg',samples:reference('3d-led-sign-board.jpg'),service:'3d-led-sign-boards'},
  {id:'gold-acrylic',name:'3D golden acrylic LED sign board',family:'LED boards',price:'₹700–₹800',unit:'per sq ft',description:'Golden acrylic lettering for a warm, expressive brand finish.',note:'Indicative rate varies with board size and lettering details.',image:'3d-acrylic-signage-letters.jpg',samples:reference('3d-acrylic-signage-letters.jpg'),service:'acrylic-sign-boards'},
  {id:'mixed-led',name:'3D with 2D letters LED sign board',family:'LED boards',price:'₹600–₹700',unit:'per sq ft',description:'Combine raised and flat lettering in one coordinated sign.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-sign-board.jpg',samples:reference('3d-led-sign-board.jpg'),service:'3d-led-sign-boards'},

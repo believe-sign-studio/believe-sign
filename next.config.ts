@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next';
 const preview = process.env.STATIC_PREVIEW === '1';
 const config: NextConfig = {
+  experimental: { cpus: 1 },
   output: preview ? 'export' : undefined,
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   trailingSlash: true,

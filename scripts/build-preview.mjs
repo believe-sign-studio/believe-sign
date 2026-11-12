@@ -10,6 +10,6 @@ rmSync(generatedDev,{recursive:true,force:true});
 if(existsSync(holding)&&!existsSync(api))renameSync(holding,api);
 renameSync(api,holding);
 let code=1;
-try {const r=spawnSync(process.execPath,['node_modules/next/dist/bin/next','build'],{stdio:'inherit',env:{...process.env,STATIC_PREVIEW:'1',NEXT_PUBLIC_INDEXABLE:'false'}});code=r.status??1}
+try {const r=spawnSync(process.execPath,['node_modules/next/dist/bin/next','build'],{stdio:'inherit',env:{...process.env,STATIC_PREVIEW:'1',NEXT_PUBLIC_INDEXABLE:process.env.NEXT_PUBLIC_INDEXABLE||'false'}});code=r.status??1}
 finally{renameSync(holding,api)}
 process.exit(code);
