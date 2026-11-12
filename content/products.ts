@@ -1,3 +1,36 @@
+const acpSamples = [
+  {
+    "image": "acp-monginis.webp",
+    "caption": "Monginis Cake Shop ACP fascia reference.",
+    "alt": "Monginis Cake Shop signage"
+  },
+  {
+    "image": "acp-akshar-furniture.webp",
+    "caption": "Akshar Furniture ACP fascia reference.",
+    "alt": "Akshar Furniture signage"
+  },
+  {
+    "image": "acp-mr-cake-paul-bastralaya.webp",
+    "caption": "Mr. Cake & Paul Bastralaya ACP fascia reference.",
+    "alt": "Mr. Cake & Paul Bastralaya signage"
+  },
+  {
+    "image": "acp-rani-bala.webp",
+    "caption": "Hotel Rani Bala ACP fascia reference.",
+    "alt": "Hotel Rani Bala signage"
+  },
+  {
+    "image": "acp-kashirams.webp",
+    "caption": "Kashiram’s ACP fascia reference.",
+    "alt": "Kashiram’s signage"
+  },
+  {
+    "image": "acp-mount-villa.webp",
+    "caption": "Mount Villa Hotel & Restaurant ACP fascia reference.",
+    "alt": "Mount Villa Hotel & Restaurant signage"
+  }
+];
+
 const acrylicLetterSamples = [
   {
     "image": "acrylic-letters-silver-jubilee.webp",
@@ -264,7 +297,7 @@ export const products:Product[]=[
  {id:'gold-acrylic',name:'3D golden acrylic LED sign board',family:'LED boards',price:'₹700–₹800',unit:'per sq ft',description:'Golden acrylic lettering for a warm, expressive brand finish.',note:'Indicative rate varies with board size and lettering details.',image:'gold-acrylic-samrat-jewellers-day.webp',samples:goldenAcrylicSamples,service:'golden-acrylic-led-sign-boards'},
  {id:'mixed-led',name:'3D with 2D letters LED sign board',family:'LED boards',price:'₹600–₹700',unit:'per sq ft',description:'Combine raised and flat lettering in one coordinated sign.',note:'Indicative rate varies with board size and lettering details.',image:'mixed-led-sikkim-it.webp',samples:mixedLedSamples,service:'3d-with-2d-led-sign-boards'},
  {id:'acrylic-letters',name:'3D acrylic signage letters',family:'Letters',price:'₹80–₹90',unit:'per inch of height, per letter',description:'Custom acrylic letters and logos, made to your artwork.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'acrylic-letters-midtown.webp',samples:acrylicLetterSamples,service:'acrylic-sign-boards'},
- {id:'acp',name:'ACP fabrication + 3D acrylic letters',family:'ACP & fascia',price:'₹230–₹280',unit:'per sq ft for ACP fabrication',description:'A complete fascia backdrop with separately priced acrylic lettering.',note:'ACP fabrication includes installation within Siliguri. Acrylic letters: ₹90–₹100 per inch of height, per letter, charged separately. GST and transport are excluded. Final cost depends on ACP area, letter sizes and quantity.',image:'image5.jpg',samples:reference('image5.jpg'),service:'acp-sign-boards'},
+ {id:'acp',name:'ACP fabrication + 3D acrylic letters',family:'ACP & fascia',price:'₹230–₹280',unit:'per sq ft for ACP fabrication',description:'A complete fascia backdrop with separately priced acrylic lettering.',note:'ACP fabrication includes installation within Siliguri. Acrylic letters: ₹90–₹100 per inch of height, per letter, charged separately. GST and transport are excluded. Final cost depends on ACP area, letter sizes and quantity.',image:'acp-mount-villa.webp',samples:acpSamples,service:'acp-sign-boards'},
  {id:'steel-backlit',name:'Stainless steel backlit letters',family:'Letters',price:'₹90–₹160',unit:'per inch of height, per letter',description:'Metal lettering with a soft halo of light behind each letter.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'image7.jpg',samples:reference('image7.jpg'),service:'stainless-steel-letter-signage'},
  {id:'lollipop',name:'Lollipop sign board',family:'Projecting signs',price:'₹800–₹900',unit:'per sq ft',description:'A projecting sign that helps customers spot your entrance.',note:'Indicative rate varies with sign size and quantity.',image:'2d-led-sign-board.jpg',samples:reference('2d-led-sign-board.jpg'),service:'lollipop-sign-boards'},
  {id:'flex-glow',name:'Backlit flex glow sign board',family:'Neon & glow',price:'₹220–₹270',unit:'per sq ft',description:'An illuminated panel for your name, artwork and business details.',note:'Indicative rate varies with the sign board size.',image:'image8.jpg',samples:reference('image8.jpg'),service:'glow-sign-boards'},

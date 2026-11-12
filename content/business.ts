@@ -20,7 +20,7 @@ export const projects = [
  ...addedProjects,
  {title:'Sandhya Makeup Studio & Academy',category:'Illuminated',image:'image1.jpg',alt:'Illuminated Sandhya Makeup Studio and Academy sign displayed in the workshop'},
  {title:'Prince Lodge',category:'Illuminated',image:'image2.jpg',alt:'Prince Lodge raised letters illuminated in warm yellow at night'},
- {title:'Kashiram’s',category:'Storefronts',image:'image7.jpg',alt:'Kashiram’s corner storefront with raised white lettering on a dark fascia'},
+ {title:'Kashiram’s',category:'Storefronts',image:'acp-kashirams.webp',alt:"White lettering and circular monograms wrap around a charcoal corner fascia. The consistent treatment makes the shop name visible from both approaches."},
  {title:'Ma Arati Jewellery',category:'Storefronts',image:'image5.jpg',alt:'Jewellery shop fascia with raised Bengali lettering'},
  {title:'Botanical Survey of India',category:'Lettering',image:'image4.jpg',alt:'Botanical Survey of India entrance sign with raised bilingual lettering'},
  {title:'Workshop / Green Park lettering',category:'Illuminated',image:'image6.jpg',alt:'Believe Sign workshop with illuminated Green Park letters being worked on'},
