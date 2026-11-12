@@ -1,3 +1,61 @@
+const acrylicLetterSamples = [
+  {
+    "image": "acrylic-letters-silver-jubilee.webp",
+    "caption": "25 Years · Silver Jubilee.",
+    "alt": "25 Years · Silver Jubilee signage reference"
+  },
+  {
+    "image": "acrylic-letters-ranjana-palace.webp",
+    "caption": "Hotel Ranjana Palace.",
+    "alt": "Hotel Ranjana Palace signage reference"
+  },
+  {
+    "image": "acrylic-letters-illuminated-numerals.webp",
+    "caption": "Custom Illuminated Numerals.",
+    "alt": "Custom Illuminated Numerals signage reference"
+  },
+  {
+    "image": "acrylic-letters-reception.webp",
+    "caption": "Reception Lettering.",
+    "alt": "Reception Lettering signage reference"
+  },
+  {
+    "image": "acrylic-letters-midtown.webp",
+    "caption": "Hotel Midtown.",
+    "alt": "Hotel Midtown signage reference"
+  },
+  {
+    "image": "acrylic-letters-godak.webp",
+    "caption": "I Love Godak.",
+    "alt": "I Love Godak signage reference"
+  },
+  {
+    "image": "acrylic-letters-pakyong.webp",
+    "caption": "I Love Pakyong.",
+    "alt": "I Love Pakyong signage reference"
+  },
+  {
+    "image": "acrylic-letters-health-point.webp",
+    "caption": "Health Point.",
+    "alt": "Health Point signage reference"
+  },
+  {
+    "image": "acrylic-letters-house-hotel.webp",
+    "caption": "The House Hotel.",
+    "alt": "The House Hotel signage reference"
+  },
+  {
+    "image": "acrylic-letters-pro-ultimate-jeans.webp",
+    "caption": "Pro Ultimate Jeans.",
+    "alt": "Pro Ultimate Jeans signage reference"
+  },
+  {
+    "image": "acrylic-letters-kh-plaza.webp",
+    "caption": "KH Plaza.",
+    "alt": "KH Plaza signage reference"
+  }
+];
+
 const mixedLedSamples = [
   {
     "image": "mixed-led-sikkim-it.webp",
@@ -205,7 +263,7 @@ export const products:Product[]=[
  {id:'3d-led',name:'3D letters LED sign board',family:'LED boards',price:'₹650–₹750',unit:'per sq ft',description:'Raised illuminated lettering with depth and after-dark presence.',note:'Indicative rate varies with board size and lettering details.',image:'3d-led-muscle-aid-night.webp',samples:threeDLedSamples,service:'3d-led-sign-boards'},
  {id:'gold-acrylic',name:'3D golden acrylic LED sign board',family:'LED boards',price:'₹700–₹800',unit:'per sq ft',description:'Golden acrylic lettering for a warm, expressive brand finish.',note:'Indicative rate varies with board size and lettering details.',image:'gold-acrylic-samrat-jewellers-day.webp',samples:goldenAcrylicSamples,service:'golden-acrylic-led-sign-boards'},
  {id:'mixed-led',name:'3D with 2D letters LED sign board',family:'LED boards',price:'₹600–₹700',unit:'per sq ft',description:'Combine raised and flat lettering in one coordinated sign.',note:'Indicative rate varies with board size and lettering details.',image:'mixed-led-sikkim-it.webp',samples:mixedLedSamples,service:'3d-with-2d-led-sign-boards'},
- {id:'acrylic-letters',name:'3D acrylic signage letters',family:'Letters',price:'₹80–₹90',unit:'per inch of height, per letter',description:'Custom acrylic letters and logos, made to your artwork.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'3d-acrylic-signage-letters.jpg',samples:reference('3d-acrylic-signage-letters.jpg'),service:'acrylic-sign-boards'},
+ {id:'acrylic-letters',name:'3D acrylic signage letters',family:'Letters',price:'₹80–₹90',unit:'per inch of height, per letter',description:'Custom acrylic letters and logos, made to your artwork.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'acrylic-letters-midtown.webp',samples:acrylicLetterSamples,service:'acrylic-sign-boards'},
  {id:'acp',name:'ACP fabrication + 3D acrylic letters',family:'ACP & fascia',price:'₹230–₹280',unit:'per sq ft for ACP fabrication',description:'A complete fascia backdrop with separately priced acrylic lettering.',note:'ACP fabrication includes installation within Siliguri. Acrylic letters: ₹90–₹100 per inch of height, per letter, charged separately. GST and transport are excluded. Final cost depends on ACP area, letter sizes and quantity.',image:'image5.jpg',samples:reference('image5.jpg'),service:'acp-sign-boards'},
  {id:'steel-backlit',name:'Stainless steel backlit letters',family:'Letters',price:'₹90–₹160',unit:'per inch of height, per letter',description:'Metal lettering with a soft halo of light behind each letter.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'image7.jpg',samples:reference('image7.jpg'),service:'stainless-steel-letter-signage'},
  {id:'lollipop',name:'Lollipop sign board',family:'Projecting signs',price:'₹800–₹900',unit:'per sq ft',description:'A projecting sign that helps customers spot your entrance.',note:'Indicative rate varies with sign size and quantity.',image:'2d-led-sign-board.jpg',samples:reference('2d-led-sign-board.jpg'),service:'lollipop-sign-boards'},
