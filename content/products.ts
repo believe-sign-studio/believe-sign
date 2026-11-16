@@ -1,3 +1,41 @@
+const acrylicLogoSamples = [
+  {
+    "image": "acrylic-logo-lhasa-spa.webp",
+    "caption": "Lhasa Spa illuminated logo panel.",
+    "alt": "Lhasa Spa illuminated logo panel"
+  },
+  {
+    "image": "acrylic-logo-aryan.webp",
+    "caption": "Aryan illuminated monogram and diamond emblem.",
+    "alt": "Aryan illuminated monogram and diamond emblem"
+  },
+  {
+    "image": "acrylic-logo-taste-for-you.webp",
+    "caption": "Taste For You cake logo display.",
+    "alt": "Taste For You cake logo display"
+  },
+  {
+    "image": "acrylic-logo-dawat.webp",
+    "caption": "I Love Dawat illuminated tree emblem.",
+    "alt": "I Love Dawat illuminated tree emblem"
+  },
+  {
+    "image": "acrylic-logo-plastiko-night.webp",
+    "caption": "Plastiko dimensional logo — illuminated view.",
+    "alt": "Plastiko dimensional logo — illuminated view"
+  },
+  {
+    "image": "acrylic-logo-plastiko-day.webp",
+    "caption": "Plastiko dimensional logo — daylight view.",
+    "alt": "Plastiko dimensional logo — daylight view"
+  },
+  {
+    "image": "acrylic-logo-believe-sign.webp",
+    "caption": "Believe Sign circular illuminated emblem.",
+    "alt": "Believe Sign circular illuminated emblem"
+  }
+];
+
 const neonSamples = [
   {
     "image": "neon-welcome-open.webp",
@@ -428,16 +466,130 @@ export const products:Product[]=[
  {id:'steel-backlit',name:'Stainless steel backlit letters',family:'Letters',price:'₹90–₹160',unit:'per inch of height, per letter',description:'Metal lettering with a soft halo of light behind each letter.',note:'Manufacturing rate varies with letter height, size and quantity.',image:'steel-backlit-indo-crafts.webp',samples:steelBacklitSamples,service:'stainless-steel-letter-signage'},
  {id:'lollipop',name:'Lollipop sign board',family:'Projecting signs',price:'₹800–₹900',unit:'per sq ft',description:'A projecting sign that helps customers spot your entrance.',note:'Indicative rate varies with sign size and quantity.',image:'lollipop-wonder-woods.webp',samples:lollipopSamples,service:'lollipop-sign-boards'},
  {id:'flex-glow',name:'Backlit flex glow sign board',family:'Neon & glow',price:'₹220–₹270',unit:'per sq ft',description:'An illuminated panel for your name, artwork and business details.',note:'Indicative rate varies with the sign board size.',image:'flex-glow-blue-bell.webp',samples:flexGlowSamples,service:'glow-sign-boards'},
- {id:'neon',name:'Neon light signage',family:'Neon & glow',price:'₹700–₹900',unit:'per sq ft',description:'A distinctive line of light for a name, phrase or feature wall.',note:'Indicative rate varies with sign size, lettering content and quantity.',image:'neon-good-vibes.webp',samples:neonSamples,service:'neon-sign-boards'}
+ {id:'neon',name:'Neon light signage',family:'Neon & glow',price:'₹700–₹900',unit:'per sq ft',description:'A distinctive line of light for a name, phrase or feature wall.',note:'Indicative rate varies with sign size, lettering content and quantity.',image:'neon-good-vibes.webp',samples:neonSamples,service:'neon-sign-boards'},
+ {id:'acrylic-logo',name:'3D acrylic signage logo',family:'Letters',price:'₹900–₹1,000',unit:'per sq ft',description:'Custom dimensional acrylic logos and emblems that bring your brand identity into a physical space.',note:'Approximate rate. The logo price may increase or decrease based on logo design, size and quantity.',image:'acrylic-logo-aryan.webp',samples:acrylicLogoSamples,service:'3d-acrylic-signage-logo'}
 ];
-export const businessCategories=[
- {name:'Hotels',description:'Hotel name boards, entrance lettering and reception branding.',ids:['3d-led','gold-acrylic','steel-backlit','acp','acrylic-letters']},
- {name:'Hospitals & clinics',description:'Clear hospital signage, clinic name boards and entrance branding.',ids:['2d-led','3d-led','acp','acrylic-letters','flex-glow']},
- {name:'Clubs',description:'Club signage, illuminated entrances and neon feature walls.',ids:['neon','3d-led','gold-acrylic','steel-backlit','lollipop']},
- {name:'Restaurants',description:'Restaurant sign boards, projecting signs and illuminated lettering.',ids:['3d-led','mixed-led','neon','lollipop','acp','flex-glow']},
- {name:'Shops & retail',description:'Shop sign boards, ACP fascias and lettering for your storefront.',ids:['2d-led','3d-led','mixed-led','acp','lollipop','flex-glow']},
- {name:'Cloud kitchens',description:'Cloud kitchen name boards and compact signs for pickup points.',ids:['2d-led','flex-glow','lollipop','acrylic-letters']},
- {name:'Food joints',description:'Food outlet signage for a visible, recognisable street presence.',ids:['2d-led','mixed-led','neon','lollipop','flex-glow']},
- {name:'Cafés',description:'Café neon signs, entrance lettering and projecting boards.',ids:['neon','gold-acrylic','lollipop','acrylic-letters','3d-led']},
- {name:'Offices & studios',description:'Reception logos, office name boards and dimensional letters.',ids:['steel-backlit','acrylic-letters','gold-acrylic','acp']}
+export const businessCategories = [
+  {
+    "name": "Apartment & complex",
+    "description": "Explore custom signage options for your apartment & complex.",
+    "ids": [
+      "acp",
+      "steel-backlit",
+      "acrylic-letters",
+      "3d-led"
+    ]
+  },
+  {
+    "name": "School & college",
+    "description": "Explore custom signage options for your school & college.",
+    "ids": [
+      "3d-led",
+      "acp",
+      "acrylic-letters",
+      "steel-backlit"
+    ]
+  },
+  {
+    "name": "Hotel & restaurant",
+    "description": "Explore custom signage options for your hotel & restaurant.",
+    "ids": [
+      "3d-led",
+      "gold-acrylic",
+      "steel-backlit",
+      "neon",
+      "lollipop",
+      "acp"
+    ]
+  },
+  {
+    "name": "Hospital",
+    "description": "Explore custom signage options for your hospital.",
+    "ids": [
+      "3d-led",
+      "2d-led",
+      "acp",
+      "steel-backlit"
+    ]
+  },
+  {
+    "name": "Clinic & medical shop",
+    "description": "Explore custom signage options for your clinic & medical shop.",
+    "ids": [
+      "2d-led",
+      "mixed-led",
+      "acp",
+      "flex-glow",
+      "lollipop"
+    ]
+  },
+  {
+    "name": "Grocery store",
+    "description": "Explore custom signage options for your grocery store.",
+    "ids": [
+      "2d-led",
+      "mixed-led",
+      "flex-glow",
+      "lollipop"
+    ]
+  },
+  {
+    "name": "Bakery shop",
+    "description": "Explore custom signage options for your bakery shop.",
+    "ids": [
+      "3d-led",
+      "mixed-led",
+      "neon",
+      "acp",
+      "lollipop"
+    ]
+  },
+  {
+    "name": "Gym & fitness centre",
+    "description": "Explore custom signage options for your gym & fitness centre.",
+    "ids": [
+      "3d-led",
+      "mixed-led",
+      "neon",
+      "acrylic-letters"
+    ]
+  },
+  {
+    "name": "Corporate office",
+    "description": "Explore custom signage options for your corporate office.",
+    "ids": [
+      "acrylic-logo",
+      "steel-backlit",
+      "acrylic-letters",
+      "gold-acrylic",
+      "acp"
+    ]
+  },
+  {
+    "name": "Salon & make-up studio",
+    "description": "Explore custom signage options for your salon & make-up studio.",
+    "ids": [
+      "gold-acrylic",
+      "3d-led",
+      "neon",
+      "acrylic-letters",
+      "lollipop"
+    ]
+  },
+  {
+    "name": "Tour & Travel agency",
+    "description": "Explore custom signage options for your tour & travel agency.",
+    "ids": [
+      "2d-led",
+      "3d-led",
+      "flex-glow",
+      "acp",
+      "lollipop"
+    ]
+  }
 ];
+
+businessCategories.push({name:'Government offices',description:'Explore departmental name boards, entrance signs, emblems and reception branding for government offices.',ids:['acp','steel-backlit','acrylic-letters','acrylic-logo','3d-led']});
+
+products.push({"id": "road-reflective", "name": "ACP retro-reflective road sign board", "family": "Road & safety", "price": "₹230–₹280", "unit": "per sq ft", "description": "Reflective road, direction and safety boards on an ACP backing, tailored to your required artwork.", "note": "The sign board price may increase or decrease based on size and quantity. Confirm installation, transport and applicable GST in your exact quotation. Gallery includes supplied design references.", "image": "road-reflective-caution.webp", "samples": [{"image": "road-reflective-warning.webp", "caption": "Reflective caution and direction signs", "alt": "Reflective caution and direction signs"}, {"image": "road-reflective-no-parking.webp", "caption": "Vehicle entrance no-parking sign — supplied design reference", "alt": "Vehicle entrance no-parking sign — supplied design reference"}, {"image": "road-reflective-wayfinding.webp", "caption": "Business park wayfinding — supplied design reference", "alt": "Business park wayfinding — supplied design reference"}, {"image": "road-reflective-load.webp", "caption": "Maximum load safety sign — supplied design reference", "alt": "Maximum load safety sign — supplied design reference"}, {"image": "road-reflective-godwin.webp", "caption": "Godwin Modern School directional boards", "alt": "Godwin Modern School directional boards"}, {"image": "road-reflective-caution.webp", "caption": "Caution: crash prone area reflective board", "alt": "Caution: crash prone area reflective board"}, {"image": "road-reflective-stop.webp", "caption": "Electric engines stop reflective sign", "alt": "Electric engines stop reflective sign"}], "service": "acp-retro-reflective-road-sign-boards"});
+for (const category of businessCategories) { if (["Government offices","Apartment & complex","School & college","Corporate office","Hospital"].includes(category.name)) category.ids.push("road-reflective"); }

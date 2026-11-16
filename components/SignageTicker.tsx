@@ -1,0 +1,6 @@
+"use client";
+import {useState} from 'react';
+import Link from '@/components/Link';
+import {products} from '@/content/products';
+const names:Record<string,string>={'2d-led':'2D LED Sign Boards','3d-led':'3D LED Letters','gold-acrylic':'Golden Acrylic LED Signs','mixed-led':'3D + 2D LED Sign Boards','acrylic-letters':'3D Acrylic Letters',acp:'ACP Cladding','steel-backlit':'Stainless Steel Letters',lollipop:'Lollipop Sign Boards','flex-glow':'Backlit Flex Glow Boards',neon:'Neon Signs','acrylic-logo':'3D Acrylic Logos','road-reflective':'ACP Retro-Reflective Road Signs'};
+export default function SignageTicker(){const [paused,setPaused]=useState(false);return <aside className={`signage-ticker${paused?' is-paused':''}`} aria-label="Our signage varieties"><div className="ticker-window"><div className="ticker-track">{[0,1].map(copy=><div className="ticker-group" key={copy} aria-hidden={copy===1?true:undefined}>{products.map(p=><Link key={p.id} href={`/${p.service}/`} tabIndex={copy===1?-1:undefined}><span>{names[p.id]||p.name}</span><i aria-hidden="true">✦</i></Link>)}</div>)}</div></div><button type="button" className="ticker-toggle" onClick={()=>setPaused(v=>!v)} aria-label={paused?'Play signage ticker':'Pause signage ticker'}>{paused?'▶':'Ⅱ'}</button></aside>}
