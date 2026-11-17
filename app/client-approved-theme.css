@@ -43,3 +43,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .floating-contact>a span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 body footer{padding-bottom:calc(155px + env(safe-area-inset-bottom))}
 }
+
+/* A quiet repeating reveal, without changing the tagline's layout height. */
+.premium-tagline{text-align:center;width:100%;animation:premium-tagline-fade 4s ease-in-out infinite}
+@keyframes premium-tagline-fade{0%,50%{opacity:1}62.5%,87.5%{opacity:0}100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.premium-tagline{animation:none;opacity:1}}
+
+.footer-credit,.footer-credit a{color:#C5C9CC;font-weight:300}
