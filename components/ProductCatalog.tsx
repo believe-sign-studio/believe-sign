@@ -4,24 +4,24 @@ import Image from '@/components/SiteImage';
 import Link from '@/components/Link';
 import {business} from '@/content/business';
 import {productExplanations} from '@/content/product-explanations';
-import {products,businessCategories,type Product} from '@/content/products';
+import {products,businessCategories,signageTypeFilters,type Product} from '@/content/products';
 import {WhatsAppIcon,PhoneIcon} from '@/components/ContactActions';
 
 export default function ProductCatalog(){
- const [category,setCategory]=useState('All businesses');
- const [family,setFamily]=useState('All services');
+ const [family,setFamily]=useState('All');
  const [selected,setSelected]=useState<Product|null>(null);
- const activeBusiness=businessCategories.find(c=>c.name===category);
- const visible=products.filter(p=>(family==='All services'||p.family===family)&&(!activeBusiness||activeBusiness.ids.includes(p.id)));
+ const activeType=signageTypeFilters.find(t=>t.name===family);
+ const visible=products.filter(p=>!activeType||activeType.ids.includes(p.id));
  return <div className="product-catalog" id="products">
-  <div className="section-heading"><div><span className="eyebrow">01 / SERVICES FOR YOUR PRESENCE</span><h2>Find the sign.<br/><em>Fit your space.</em></h2></div><p>Explore signage by type or business. Browse indicative prices, then share your measurements for an exact quotation.</p></div>
-  <div className="business-browser"><h3>What kind of space are you creating?</h3><p>Explore signage for apartments, schools, hotels, restaurants, hospitals, clinics, shops, gyms, offices, government offices, salons and travel agencies.</p><div className="catalog-chips" aria-label="Explore by business category">{['All businesses',...businessCategories.map(c=>c.name)].map(name=><button key={name} type="button" aria-pressed={category===name} onClick={()=>{setCategory(name);setFamily('All services')}}>{name}</button>)}</div></div>
-  <div className="catalog-type-row"><span>Explore by type</span><div className="catalog-chips" aria-label="Explore by signage type">{['All services','LED boards','Letters','ACP & fascia','Projecting signs','Neon & glow','Road & safety'].map(name=><button key={name} type="button" aria-pressed={family===name} onClick={()=>setFamily(name)}>{name}</button>)}</div></div>
-  <div className="catalog-results" aria-live="polite"><p>{activeBusiness?activeBusiness.description:'Twelve ways to bring your brand to life. Select a service to see references and request your exact price.'}</p><span>{visible.length} {visible.length===1?'service':'services'}</span></div>
+  <div className="section-heading"><div><span className="eyebrow">01 / SERVICES FOR YOUR PRESENCE</span><h2>Find the sign.<br/><em>Fit your space.</em></h2></div><p>Explore signage by type. Browse indicative prices, then share your measurements for an exact quotation.</p></div>
+  <div className="business-browser"><h3>What kind of space are you creating?</h3><p>We cater to apartments, schools, hotels, restaurants, hospitals, clinics, shops, gyms, offices, government offices, salons and travel agencies. Every space can choose from our complete range of signage.</p><ul className="business-audiences" aria-label="Businesses we cater to">{businessCategories.map(c=><li key={c.name}>{c.name}</li>)}</ul></div>
+  <section className="service-locations" aria-labelledby="service-locations-title"><h3 id="service-locations-title">Service locations</h3><p>Serving customers across North Bengal and Sikkim, with services in the following areas of Bihar and Assam.</p><dl><div><dt>North Bengal</dt><dd>All areas</dd></div><div><dt>Sikkim</dt><dd>All areas</dd></div><div><dt>Bihar</dt><dd>Kishanganj, Bahadurganj, Purnia, Forbesganj, Araria and Katihar</dd></div><div><dt>Assam</dt><dd>Dhubri, Kokrajhar and Bongaigaon</dd></div></dl></section>
+  <div className="catalog-type-row"><span>Explore by type</span><div className="catalog-chips" aria-label="Explore by signage type">{['All',...signageTypeFilters.map(t=>t.name)].map(name=><button key={name} type="button" aria-pressed={family===name} onClick={()=>setFamily(name)}>{name}</button>)}</div></div>
+  <div className="catalog-results" aria-live="polite"><p>{activeType?`Explore ${activeType.name.toLowerCase()}. Select a service for sample images and an exact quotation.`:'Thirteen ways to bring your brand to life. Select a service to see references and request your exact price.'}</p><span>{visible.length} {visible.length===1?'service':'services'}</span></div>
   <div className="product-grid">{visible.map(p=><article className="product-card" key={p.id}><button className="product-open" type="button" onClick={()=>setSelected(p)} aria-label={`View ${p.name} samples and pricing`}><div className="product-photo"><Image src={`/images/${p.image}`} alt={`${p.name}: representative portfolio reference`} fill sizes="(max-width:600px) 90vw, (max-width:1000px) 44vw, 29vw"/><span>Explore ↗</span></div><span className="eyebrow">{p.family}</span><h3>{p.name}</h3></button><p>{p.description}</p><div className="product-price"><strong>{p.price}</strong><span>{p.unit}</span></div>{p.id==='acp'&&<p className="acp-line">Letters extra: ₹90–₹100 / inch of height, per letter.</p>}<button type="button" className="product-detail-button" onClick={()=>setSelected(p)}>Samples & exact quotation <span>↗</span></button></article>)}</div>
-  {visible.length===0&&<div className="catalog-empty"><p>No matches for this combination. Explore all services or contact us for a recommendation.</p><button type="button" onClick={()=>{setFamily('All services');setCategory('All businesses')}}>Show all services ↗</button></div>}
+  {visible.length===0&&<div className="catalog-empty"><p>No matches for this combination. Explore all services or contact us for a recommendation.</p><button type="button" onClick={()=>setFamily('All')}>Show all services ↗</button></div>}
   <p className="catalog-price-note">All prices are approximate and may increase or decrease with dimensions, artwork, letter details and quantity. Ask us to confirm installation, electrical work, transport and GST in your written quotation.</p>
-  {selected&&<ProductDialog key={selected.id} product={selected} category={category} onClose={()=>setSelected(null)}/>}
+  {selected&&<ProductDialog key={selected.id} product={selected} category="All businesses" onClose={()=>setSelected(null)}/>}
  </div>
 }
 function ProductDialog({product:p,category,onClose}:{product:Product;category:string;onClose:()=>void}){

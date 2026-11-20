@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
 import {productExplanations} from '../content/product-explanations.ts';
-import {products,businessCategories} from '../content/products.ts';
-assert.equal(products.length,12);
-assert.equal(new Set(products.map(p=>p.id)).size,12);
-const prices=['₹550–₹650','₹650–₹750','₹700–₹800','₹600–₹700','₹80–₹90','₹230–₹280','₹90–₹160','₹800–₹900','₹220–₹270','₹700–₹900','₹900–₹1,000','₹230–₹280'];
+import {products,businessCategories,signageTypeFilters} from '../content/products.ts';
+assert.equal(products.length,13);
+assert.equal(new Set(products.map(p=>p.id)).size,13);
+const prices=['₹550–₹650','₹650–₹750','₹700–₹800','₹600–₹700','₹80–₹90','₹230–₹280','₹90–₹160','₹800–₹900','₹220–₹270','₹700–₹900','₹900–₹1,000','₹230–₹280','₹220–₹250'];
 products.forEach((p,i)=>{assert.equal(p.price,prices[i]);assert(existsSync(`public/images/${p.image}`));assert(p.samples.length>=1&&p.samples.length<=20);p.samples.forEach(s=>assert(existsSync(`public/images/${s.image}`)));});
 assert.equal(products.find(p=>p.id==='2d-led').samples.length,8);
 assert.equal(products.find(p=>p.id==='3d-led').samples.length,8);
@@ -16,16 +16,23 @@ assert.equal(products.find(p=>p.id==='steel-backlit').samples.length,4);
 assert.equal(products.find(p=>p.id==='lollipop').samples.length,4);
 assert.equal(products.find(p=>p.id==='flex-glow').samples.length,5);
 assert.equal(products.find(p=>p.id==='neon').samples.length,10);
-assert.equal(new Set(products.map(p=>p.service)).size,12);
+assert.equal(new Set(products.map(p=>p.service)).size,13);
 for(const p of products){assert(productExplanations[p.id]?.length>0);assert(productExplanations[p.id].every(section=>section.paragraphs.length>=2));}
 assert(readFileSync('components/Shell.tsx','utf8').includes('19CSMPA2697H1ZC'));
 assert(readFileSync('components/Shell.tsx','utf8').includes('8800977146'));
-const acp=products.find(p=>p.id==='acp');assert(acp.note.includes('installation within Siliguri'));assert(acp.note.includes('GST and transport are excluded'));assert(acp.note.includes('₹90–₹100 per inch of height, per letter, charged separately'));
+const acp=products.find(p=>p.id==='acp');assert(acp.note.includes('Installation charges are extra'));assert(acp.note.includes('GST and transport are excluded'));assert(acp.note.includes('₹90–₹100 per inch of height, per letter, charged separately'));
 for(const category of businessCategories){assert(category.ids.length>0);category.ids.forEach(id=>assert(products.some(p=>p.id===id)));}
-console.log('Passed: twelve supplied prices, ACP scope and exclusions, category mappings and sample asset references.');
+console.log('Passed: thirteen supplied prices, ACP scope and exclusions, category mappings and sample asset references.');
 
 assert.equal(products.find(p=>p.id==='acrylic-logo').samples.length,7);
 assert(businessCategories.some(c=>c.name==='Government offices'));
 
 assert.equal(products.find(p=>p.id==='road-reflective').samples.length,7);
 assert.equal(products.find(p=>p.id==='road-reflective').unit,'per sq ft');
+
+assert.equal(products.find(p=>p.id==='metal-box').samples.length,5);
+
+assert.equal(signageTypeFilters.length,9);
+const filteredIds=new Set(signageTypeFilters.flatMap(t=>t.ids));
+for(const p of products)assert(filteredIds.has(p.id),`${p.name} missing from type filters`);
+for(const t of signageTypeFilters){assert(t.ids.length>0);for(const id of t.ids)assert(products.some(p=>p.id===id));}

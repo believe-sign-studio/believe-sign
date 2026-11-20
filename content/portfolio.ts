@@ -111,7 +111,7 @@ export const addedProjects = [
   },
   {
     "title": "Cyber Treasury · Finance Department",
-    "image": "gold-acrylic-cyber-treasury.webp",
+    "image": "cyber-treasury-featured.webp",
     "category": "Lettering",
     "alt": "Golden institutional lettering is arranged across a wood-toned interior panel. Symmetrical emblems and decorative lines frame the department name."
   },
@@ -123,6 +123,20 @@ export const addedProjects = [
   }
 ];
 
-export const selectedProjectTitles = ['Samrat Jewellers','Muscle Aid Fitness','The Locs Nail & Beauty Spa','Mr. Cake & Paul Bastralaya','Himalayan Mountaineering Institute','Godwin Modern School','Himalayan Arts & Crafts','Hotel Midtown','The House Hotel','Akshar Furniture','Mount Villa Hotel & Restaurant','Sikkim IT Enterprise','Wonder Woods Boutique Hotel','Indo-crafts','Good Vibes Only'];
+export const selectedProjectTitles = ['Cyber Treasury · Finance Department','Samrat Jewellers','Muscle Aid Fitness','The Locs Nail & Beauty Spa','Mr. Cake & Paul Bastralaya','Himalayan Mountaineering Institute','Godwin Modern School','Himalayan Arts & Crafts','Hotel Midtown','The House Hotel','Akshar Furniture','Mount Villa Hotel & Restaurant','Sikkim IT Enterprise','Wonder Woods Boutique Hotel','Indo-crafts','Good Vibes Only'];
 
 selectedProjectTitles.push('Lhasa Spa','Aryan Logo','I Love Dawat');
+
+// Client-supplied replacements retain their selected portfolio positions.
+const portfolioReplacements = [{"old": "Sikkim IT Enterprise", "title": "Peak Tu Peaks Chanakya Hotel · Dhaba", "image": "portfolio-dhaba-chanakya.webp", "category": "Storefronts", "alt": "Raised red lettering and a mountain emblem stand against a vivid blue restaurant fascia. Supporting lettering identifies the hotel and The Mall Restaurant."}, {"old": "Mount Villa Hotel & Restaurant", "title": "Hotel Ranjana Palace", "image": "portfolio-hotel-ranjana.webp", "category": "Illuminated", "alt": "Red dimensional letters with warm illuminated edges create a bold hotel name against the night sky."}, {"old": "Wonder Woods Boutique Hotel", "title": "I Love Godak", "image": "portfolio-i-love-godak.webp", "category": "Lettering", "alt": "Freestanding blue letters and a red heart form a landmark display, framed by the green hills of Godak."}, {"old": "Lhasa Spa", "title": "33 Corps Dental Unit", "image": "portfolio-33-corps-dental.webp", "category": "Illuminated", "alt": "A green, white and red illuminated panel presents the dental-unit name, with institutional emblems balancing the layout."}, {"old": "Good Vibes Only", "title": "Neon Wings", "image": "portfolio-neon-wings.webp", "category": "Illuminated", "alt": "Red, yellow and blue neon-style wings create a colourful decorative feature, with flowing light outlines and a symmetrical shape."}, {"old": "Indo-crafts", "title": "I Love Pakyong", "image": "portfolio-i-love-pakyong.webp", "category": "Illuminated", "alt": "Illuminated white letters and a red heart form the Pakyong landmark display. A golden Buddha motif completes the composition."}];
+for (const replacement of portfolioReplacements) {
+ const {old,...project}=replacement;
+ const existing=addedProjects.find(p=>p.title===project.title);
+ if(existing)Object.assign(existing,project);else addedProjects.push(project);
+ const position=selectedProjectTitles.indexOf(old);
+ if(position>=0)selectedProjectTitles[position]=project.title;
+}
+
+const finalPortfolioAdditions = [{"title": "Broadway Boutique Hotel", "category": "Lettering", "image": "portfolio-broadway-boutique.webp", "alt": "Golden dimensional letters and a matching stepped border frame a tall grey projecting hotel sign, creating a clear vertical identity."}, {"title": "Tanishq", "category": "Illuminated", "image": "portfolio-tanishq.webp", "alt": "Reflective metal lettering and the brand emblem stand out against a patterned panel, outlined by warm halo illumination."}, {"title": "Bajrangi Dhaba", "category": "Illuminated", "image": "portfolio-bajrangi-dhaba.webp", "alt": "A wood-toned fascia carries flowing dimensional script and a circular BD emblem. The supplied day-and-night collage shows the lettering with illumination switched on."}];
+for(const title of ['Aryan Logo','I Love Dawat']){const index=selectedProjectTitles.indexOf(title);if(index>=0)selectedProjectTitles.splice(index,1);}
+for(const project of finalPortfolioAdditions){const existing=addedProjects.find(p=>p.title===project.title);if(existing)Object.assign(existing,project);else addedProjects.push(project);if(!selectedProjectTitles.includes(project.title))selectedProjectTitles.push(project.title);}
