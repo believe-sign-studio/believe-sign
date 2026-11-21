@@ -608,3 +608,7 @@ export const signageTypeFilters = [
  {name:'ACP Retro reflective Sign board',ids:['road-reflective']},
  {name:'Corporate & govt project signage',ids:['2d-led','3d-led','acrylic-letters','acrylic-logo','metal-box','steel-backlit','acp','road-reflective']}
 ];
+
+// Catalogue order: acrylic letters, metal box letters, then ACP fabrication.
+const metalBoxIndex=products.findIndex(p=>p.id==='metal-box');
+if(metalBoxIndex>=0){const [metalBox]=products.splice(metalBoxIndex,1);const acrylicIndex=products.findIndex(p=>p.id==='acrylic-letters');products.splice(acrylicIndex+1,0,metalBox);}

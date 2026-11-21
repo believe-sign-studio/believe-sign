@@ -4,7 +4,7 @@ import {productExplanations} from '../content/product-explanations.ts';
 import {products,businessCategories,signageTypeFilters} from '../content/products.ts';
 assert.equal(products.length,13);
 assert.equal(new Set(products.map(p=>p.id)).size,13);
-const prices=['₹550–₹650','₹650–₹750','₹700–₹800','₹600–₹700','₹80–₹90','₹230–₹280','₹90–₹160','₹800–₹900','₹220–₹270','₹700–₹900','₹900–₹1,000','₹230–₹280','₹220–₹250'];
+const prices=['₹550–₹650','₹650–₹750','₹700–₹800','₹600–₹700','₹80–₹90','₹220–₹250','₹230–₹280','₹90–₹160','₹800–₹900','₹220–₹270','₹700–₹900','₹900–₹1,000','₹230–₹280'];
 products.forEach((p,i)=>{assert.equal(p.price,prices[i]);assert(existsSync(`public/images/${p.image}`));assert(p.samples.length>=1&&p.samples.length<=20);p.samples.forEach(s=>assert(existsSync(`public/images/${s.image}`)));});
 assert.equal(products.find(p=>p.id==='2d-led').samples.length,8);
 assert.equal(products.find(p=>p.id==='3d-led').samples.length,8);
